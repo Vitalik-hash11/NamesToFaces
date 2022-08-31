@@ -13,6 +13,7 @@
 		DDF2556028BE51C4003CF1E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF2555E28BE51C4003CF1E4 /* Main.storyboard */; };
 		DDF2556228BE51C8003CF1E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF2556128BE51C8003CF1E4 /* Assets.xcassets */; };
 		DDF2556528BE51C8003CF1E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF2556328BE51C8003CF1E4 /* LaunchScreen.storyboard */; };
+		DDF2556E28BE53C6003CF1E4 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2556D28BE53C6003CF1E4 /* PersonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DDF2556128BE51C8003CF1E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF2556428BE51C8003CF1E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF2556628BE51C8003CF1E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDF2556D28BE53C6003CF1E4 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		DDF2555728BE51C4003CF1E4 /* NamesToFaces */ = {
 			isa = PBXGroup;
 			children = (
-				DDF2555828BE51C4003CF1E4 /* AppDelegate.swift */,
-				DDF2555A28BE51C4003CF1E4 /* SceneDelegate.swift */,
+				DDF2556C28BE51E3003CF1E4 /* SupportingFiles */,
 				DDF2555C28BE51C4003CF1E4 /* ViewController.swift */,
+				DDF2556D28BE53C6003CF1E4 /* PersonCell.swift */,
 				DDF2555E28BE51C4003CF1E4 /* Main.storyboard */,
 				DDF2556128BE51C8003CF1E4 /* Assets.xcassets */,
-				DDF2556328BE51C8003CF1E4 /* LaunchScreen.storyboard */,
 				DDF2556628BE51C8003CF1E4 /* Info.plist */,
 			);
 			path = NamesToFaces;
+			sourceTree = "<group>";
+		};
+		DDF2556C28BE51E3003CF1E4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DDF2555828BE51C4003CF1E4 /* AppDelegate.swift */,
+				DDF2555A28BE51C4003CF1E4 /* SceneDelegate.swift */,
+				DDF2556328BE51C8003CF1E4 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				DDF2555D28BE51C4003CF1E4 /* ViewController.swift in Sources */,
 				DDF2555928BE51C4003CF1E4 /* AppDelegate.swift in Sources */,
+				DDF2556E28BE53C6003CF1E4 /* PersonCell.swift in Sources */,
 				DDF2555B28BE51C4003CF1E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
