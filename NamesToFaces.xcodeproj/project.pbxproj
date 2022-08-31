@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD99A1FC28BFA6320060337C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD99A1FB28BFA6320060337C /* Person.swift */; };
 		DDF2555928BE51C4003CF1E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2555828BE51C4003CF1E4 /* AppDelegate.swift */; };
 		DDF2555B28BE51C4003CF1E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2555A28BE51C4003CF1E4 /* SceneDelegate.swift */; };
 		DDF2555D28BE51C4003CF1E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF2555C28BE51C4003CF1E4 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD99A1FB28BFA6320060337C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DDF2555528BE51C4003CF1E4 /* NamesToFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamesToFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF2555828BE51C4003CF1E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF2555A28BE51C4003CF1E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				DDF2556C28BE51E3003CF1E4 /* SupportingFiles */,
 				DDF2555C28BE51C4003CF1E4 /* ViewController.swift */,
 				DDF2556D28BE53C6003CF1E4 /* PersonCell.swift */,
+				DD99A1FB28BFA6320060337C /* Person.swift */,
 				DDF2555E28BE51C4003CF1E4 /* Main.storyboard */,
 				DDF2556128BE51C8003CF1E4 /* Assets.xcassets */,
 				DDF2556628BE51C8003CF1E4 /* Info.plist */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD99A1FC28BFA6320060337C /* Person.swift in Sources */,
 				DDF2555D28BE51C4003CF1E4 /* ViewController.swift in Sources */,
 				DDF2555928BE51C4003CF1E4 /* AppDelegate.swift in Sources */,
 				DDF2556E28BE53C6003CF1E4 /* PersonCell.swift in Sources */,
