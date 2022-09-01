@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UICollectionViewController {
     
     var people = [Person]()
+    var editingPerson: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ViewController: UICollectionViewController {
         }
         cell.personLabel.text = people[indexPath.item].name
         cell.imageView.image = UIImage(contentsOfFile: people[indexPath.item].image)
+        cell.layer.cornerRadius = 10
         return cell
     }
     
@@ -33,15 +35,14 @@ class ViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
-        ac.addTextField()
-        let renameAlertAction = UIAlertAction(title: "Rename", style: .default) { [weak self, weak ac] _ in
-            guard let newName = ac?.textFields?[0].text else { return }
-            self?.people[indexPath.item].name = newName
+        let ac = UIAlertController(title: "Do you want to delete of rename person?", message: nil, preferredStyle: .alert)
+        editingPerson = indexPath.item
+        ac.addAction(UIAlertAction(title: "Rename", style: .default, handler: renamePerson ))
+        ac.addAction(UIAlertAction(title: "Delete", style: .cancel, handler: { [weak self] _ in
+            self?.people.remove(at: indexPath.item)
             self?.collectionView.reloadData()
-        }
-        ac.addAction(renameAlertAction)
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        }))
+        
         present(ac, animated: true)
     }
     
@@ -49,6 +50,9 @@ class ViewController: UICollectionViewController {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            picker.sourceType = .camera
+        }
         present(picker, animated: true)
     }
     
@@ -76,6 +80,19 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     private func getDocumentDirectory() -> URL {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[0]
+    }
+    
+    private func renamePerson(action: UIAlertAction) {
+        let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        let renameAlertAction = UIAlertAction(title: "Rename", style: .default) { [weak self, weak ac] _ in
+            guard let newName = ac?.textFields?[0].text else { return }
+            self?.people[self!.editingPerson!].name = newName
+            self?.collectionView.reloadData()
+        }
+        ac.addAction(renameAlertAction)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(ac, animated: true)
     }
 }
 
